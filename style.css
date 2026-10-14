@@ -1,0 +1,1852 @@
+/* -------------------------------------------------------------
+       CSS DESIGN SYSTEM & PALETTE
+       Marian Blue, Sacramental Gold, Ivory, Pentecost Flame Red
+    ------------------------------------------------------------- */
+    :root {
+      --primary-navy: #0e2040;
+      --marian-blue: #1b3b6f;
+      --marian-blue-light: #2c5282;
+      --marian-sky: #e9f2fb;
+      --marian-tint: #f3f7fd;
+      
+      --gold-primary: #b8860b;
+      --gold-bright: #d4af37;
+      --gold-light: #fef8e7;
+      --gold-dark: #8c6504;
+      
+      --flame-red: #9e2a2b;
+      --flame-red-light: #fdf2f2;
+      
+      --bg-cream: #faf8f5;
+      --bg-card: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --text-subtle: #6b7280;
+      
+      --border-subtle: #e5e7eb;
+      --border-gold: #e2c068;
+      
+      --font-title: 'Cinzel', Georgia, serif;
+      --font-serif: 'Cormorant Garamond', Garamond, 'Times New Roman', serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      
+      --shadow-sm: 0 1px 3px rgba(14, 32, 64, 0.06);
+      --shadow-md: 0 4px 12px rgba(14, 32, 64, 0.08);
+      --shadow-lg: 0 12px 28px rgba(14, 32, 64, 0.12);
+      --shadow-gold: 0 4px 16px rgba(184, 134, 11, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      background-color: var(--bg-cream);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--marian-blue);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--gold-primary);
+    }
+
+    /* -------------------------------------------------------------
+       TOP BANNER & NAVIGATION
+    ------------------------------------------------------------- */
+    .top-bar {
+      background: var(--primary-navy);
+      color: #e2e8f0;
+      font-size: 0.825rem;
+      padding: 0.45rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--gold-bright);
+    }
+
+    .top-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .top-bar-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: rgba(212, 175, 55, 0.2);
+      color: #fce79f;
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      font-weight: 500;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+    }
+
+    .header-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .brand-logo-svg {
+      width: 44px;
+      height: 44px;
+      fill: var(--marian-blue);
+      flex-shrink: 0;
+    }
+
+    .brand-text h1 {
+      font-family: var(--font-title);
+      font-size: 1.15rem;
+      letter-spacing: 0.04em;
+      color: var(--primary-navy);
+      line-height: 1.2;
+    }
+
+    .brand-text span {
+      font-size: 0.775rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-dark);
+      font-weight: 600;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--primary-navy);
+      padding: 0.4rem 0.2rem;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold-bright);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .btn-nav-cta {
+      background: var(--marian-blue);
+      color: #ffffff !important;
+      padding: 0.5rem 1.1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid var(--marian-blue-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-nav-cta:hover {
+      background: var(--primary-navy);
+      transform: translateY(-1px);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary-navy);
+      cursor: pointer;
+    }
+
+    /* -------------------------------------------------------------
+       HERO BANNER
+    ------------------------------------------------------------- */
+    .hero-section {
+      background: radial-gradient(circle at 75% 25%, #1b3b6f 0%, #0c1a33 100%);
+      color: #ffffff;
+      padding: 4.5rem 1.5rem 5rem;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 3px solid var(--gold-bright);
+    }
+
+    .hero-overlay-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.05;
+      background-image: radial-gradient(#d4af37 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.25fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      color: #fde68a;
+      font-size: 0.825rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-title);
+      font-size: 2.75rem;
+      line-height: 1.15;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .hero-title span {
+      color: #f7d56e;
+      display: block;
+      font-size: 1.9rem;
+      margin-top: 0.4rem;
+      font-weight: 500;
+      font-family: var(--font-serif);
+      font-style: italic;
+    }
+
+    .hero-quote {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-style: italic;
+      color: #dbeafe;
+      border-left: 3px solid var(--gold-bright);
+      padding-left: 1.25rem;
+      margin-bottom: 1.75rem;
+      line-height: 1.5;
+    }
+
+    .hero-quote-latin {
+      display: block;
+      font-size: 0.95rem;
+      color: #93c5fd;
+      margin-top: 0.35rem;
+      font-family: var(--font-sans);
+      font-style: normal;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+      color: #0c1a33;
+      padding: 0.85rem 1.6rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: var(--shadow-gold);
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-gold:hover {
+      background: linear-gradient(135deg, #e6c555 0%, #c69512 100%);
+      transform: translateY(-2px);
+      color: #0c1a33;
+    }
+
+    .btn-outline-white {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      padding: 0.85rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-outline-white:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: #ffffff;
+      color: #ffffff;
+    }
+
+    /* Meeting Card inside Hero */
+    .hero-meeting-card {
+      background: rgba(255, 255, 255, 0.97);
+      color: var(--text-main);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+      border: 2px solid var(--gold-bright);
+      position: relative;
+    }
+
+    .hero-meeting-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--marian-blue), var(--gold-bright), var(--marian-blue));
+      border-radius: 10px 10px 0 0;
+    }
+
+    .card-header-badge {
+      display: inline-block;
+      background: var(--flame-red);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.65rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.75rem;
+    }
+
+    .meeting-card-title {
+      font-family: var(--font-title);
+      font-size: 1.35rem;
+      color: var(--primary-navy);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .meeting-detail-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .meeting-detail-row:last-child {
+      border-bottom: none;
+    }
+
+    .detail-icon-wrap {
+      width: 36px;
+      height: 36px;
+      background: var(--marian-sky);
+      color: var(--marian-blue);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .detail-icon-wrap svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+    }
+
+    .detail-text h4 {
+      font-size: 0.825rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-subtle);
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+
+    .detail-text p {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary-navy);
+      line-height: 1.35;
+    }
+
+    .detail-text small {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: block;
+      font-weight: normal;
+    }
+
+    /* -------------------------------------------------------------
+       SECTION WRAPPERS & TITLES
+    ------------------------------------------------------------- */
+    .section-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem;
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-eyebrow {
+      font-size: 0.825rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-family: var(--font-title);
+      font-size: 2.15rem;
+      color: var(--primary-navy);
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .gold-divider {
+      width: 60px;
+      height: 3px;
+      background: var(--gold-bright);
+      margin: 1rem auto 1.25rem;
+      border-radius: 2px;
+    }
+
+    /* -------------------------------------------------------------
+       DAILY ROSARY MYSTERY WIDGET (INTERACTIVE)
+    ------------------------------------------------------------- */
+    .mystery-widget-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid var(--border-gold);
+      box-shadow: var(--shadow-md);
+      padding: 2rem;
+      margin-top: -2.5rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .widget-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .widget-intro {
+      border-right: 1px solid var(--border-subtle);
+      padding-right: 2rem;
+    }
+
+    .widget-intro h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--primary-navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .widget-badge-today {
+      background: var(--gold-light);
+      color: var(--gold-dark);
+      border: 1px solid var(--border-gold);
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .mystery-selector-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .mystery-tab {
+      background: var(--marian-tint);
+      border: 1px solid var(--border-subtle);
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.825rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--text-main);
+      transition: all 0.2s;
+    }
+
+    .mystery-tab.active {
+      background: var(--marian-blue);
+      color: #ffffff;
+      border-color: var(--marian-blue);
+    }
+
+    .mystery-display-content {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.85rem;
+    }
+
+    .mystery-bead-card {
+      background: var(--bg-cream);
+      border-radius: 8px;
+      padding: 1rem 0.85rem;
+      text-align: center;
+      border: 1px solid var(--border-subtle);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+
+    .mystery-bead-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+      border-color: var(--gold-bright);
+    }
+
+    .bead-number {
+      width: 28px;
+      height: 28px;
+      background: var(--marian-blue);
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .mystery-bead-card h5 {
+      font-family: var(--font-title);
+      font-size: 0.8rem;
+      color: var(--primary-navy);
+      margin-bottom: 0.35rem;
+      line-height: 1.25;
+      min-height: 2.5rem;
+    }
+
+    .mystery-bead-card p {
+      font-size: 0.75rem;
+      color: var(--gold-dark);
+      font-weight: 600;
+    }
+
+    /* -------------------------------------------------------------
+       ABOUT PRAESIDIUM & LEGION FOUNDATION
+    ------------------------------------------------------------- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 1.25rem;
+      color: var(--text-muted);
+      font-size: 1.02rem;
+    }
+
+    .highlight-card {
+      background: #ffffff;
+      border-left: 4px solid var(--marian-blue);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 8px 8px 0;
+      box-shadow: var(--shadow-sm);
+      margin: 1.5rem 0;
+    }
+
+    .highlight-card h4 {
+      font-family: var(--font-title);
+      font-size: 1rem;
+      color: var(--primary-navy);
+      margin-bottom: 0.4rem;
+    }
+
+    .highlight-card p {
+      margin-bottom: 0;
+      font-size: 0.925rem;
+    }
+
+    .spiritual-quote-box {
+      background: linear-gradient(135deg, #1b3b6f 0%, #0e2040 100%);
+      color: #ffffff;
+      padding: 2.25rem;
+      border-radius: 12px;
+      position: relative;
+      border: 1px solid var(--gold-bright);
+      box-shadow: var(--shadow-md);
+    }
+
+    .quote-icon {
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      color: rgba(212, 175, 55, 0.4);
+      position: absolute;
+      top: 0.5rem;
+      right: 1.5rem;
+      line-height: 1;
+    }
+
+    .spiritual-quote-box blockquote {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-style: italic;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .spiritual-quote-box cite {
+      font-size: 0.85rem;
+      font-style: normal;
+      color: #fce79f;
+      display: block;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    /* -------------------------------------------------------------
+       THE PRAESIDIUM ALTAR & MEETING STRUCTURE
+    ------------------------------------------------------------- */
+    .altar-section-bg {
+      background: #f4f1ea;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .altar-diagram-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 3.5rem;
+      border: 1px solid #e2d9cc;
+    }
+
+    .altar-visual-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .altar-graphic {
+      background: var(--primary-navy);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      color: #ffffff;
+      border: 2px solid var(--gold-bright);
+    }
+
+    .altar-graphic svg {
+      width: 100%;
+      height: 180px;
+    }
+
+    .altar-elements-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .altar-element-item {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .altar-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--gold-bright);
+      color: var(--primary-navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    .altar-element-item h5 {
+      font-size: 0.95rem;
+      color: var(--primary-navy);
+      margin-bottom: 0.2rem;
+    }
+
+    .altar-element-item p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Meeting Order Timeline */
+    .timeline-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+    }
+
+    .timeline-step-card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 1.25rem;
+      border: 1px solid var(--border-subtle);
+      position: relative;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .timeline-step-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--marian-blue);
+      border-radius: 8px 8px 0 0;
+    }
+
+    .step-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--gold-dark);
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    .timeline-step-card h4 {
+      font-family: var(--font-title);
+      font-size: 0.95rem;
+      color: var(--primary-navy);
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+
+    .timeline-step-card p {
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* -------------------------------------------------------------
+       TWO PARISHES IN MILTON
+    ------------------------------------------------------------- */
+    .parish-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .parish-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .parish-card.primary-host {
+      border: 2px solid var(--marian-blue);
+    }
+
+    .parish-card.primary-host::after {
+      content: 'Meeting Host Parish';
+      position: absolute;
+      top: 1.25rem;
+      right: -2rem;
+      background: var(--gold-bright);
+      color: var(--primary-navy);
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 0.25rem 2.5rem;
+      transform: rotate(45deg);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .parish-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .parish-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: var(--marian-sky);
+      color: var(--marian-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .parish-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .parish-header h3 {
+      font-family: var(--font-title);
+      font-size: 1.35rem;
+      color: var(--primary-navy);
+      line-height: 1.2;
+    }
+
+    .parish-header span {
+      font-size: 0.8rem;
+      color: var(--text-subtle);
+      display: block;
+    }
+
+    .parish-details {
+      margin-bottom: 1.5rem;
+    }
+
+    .parish-detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.65rem;
+    }
+
+    .parish-detail-item svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--marian-blue);
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+    }
+
+    .parish-schedule-badge {
+      background: var(--marian-tint);
+      border-radius: 6px;
+      padding: 0.85rem;
+      font-size: 0.85rem;
+      color: var(--primary-navy);
+      margin-bottom: 1.25rem;
+      border: 1px dashed var(--marian-blue-light);
+    }
+
+    .parish-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--marian-blue);
+    }
+
+    .parish-link-btn:hover {
+      color: var(--gold-dark);
+      text-decoration: underline;
+    }
+
+    /* -------------------------------------------------------------
+       MEMBERSHIP TYPES (ACTIVE VS AUXILIARY)
+    ------------------------------------------------------------- */
+    .membership-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .membership-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2.25rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-subtle);
+      position: relative;
+    }
+
+    .membership-card.active-type {
+      border-top: 6px solid var(--marian-blue);
+    }
+
+    .membership-card.auxiliary-type {
+      border-top: 6px solid var(--gold-bright);
+    }
+
+    .membership-type-title {
+      font-family: var(--font-title);
+      font-size: 1.5rem;
+      color: var(--primary-navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .membership-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-subtle);
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+
+    .membership-features-list {
+      list-style: none;
+      margin-bottom: 1.75rem;
+    }
+
+    .membership-features-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+      line-height: 1.45;
+    }
+
+    .check-icon {
+      width: 18px;
+      height: 18px;
+      background: #e6f4ea;
+      color: #137333;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+      font-weight: bold;
+    }
+
+    .praetorian-box {
+      background: var(--bg-cream);
+      border-radius: 8px;
+      padding: 1.25rem;
+      border: 1px solid var(--border-subtle);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .praetorian-box h5 {
+      color: var(--primary-navy);
+      font-size: 0.9rem;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Interactive Membership Quiz */
+    .quiz-card {
+      background: linear-gradient(135deg, #1b3b6f 0%, #0e2040 100%);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 2.25rem;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--gold-bright);
+    }
+
+    .quiz-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .quiz-header h3 {
+      font-family: var(--font-title);
+      font-size: 1.35rem;
+      color: #ffffff;
+    }
+
+    .quiz-badge {
+      background: rgba(212, 175, 55, 0.2);
+      color: #fce79f;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+    }
+
+    .quiz-question-box {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .quiz-question-box h4 {
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+      color: #dbeafe;
+    }
+
+    .quiz-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .quiz-option-btn {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .quiz-option-btn:hover {
+      background: rgba(212, 175, 55, 0.25);
+      border-color: var(--gold-bright);
+    }
+
+    .quiz-option-btn strong {
+      display: block;
+      color: #fde68a;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .quiz-option-btn span {
+      font-size: 0.8rem;
+      color: #e2e8f0;
+      line-height: 1.35;
+      display: block;
+    }
+
+    .quiz-result-area {
+      display: none;
+      background: #ffffff;
+      color: var(--text-main);
+      padding: 1.5rem;
+      border-radius: 8px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .quiz-result-area h4 {
+      color: var(--primary-navy);
+      font-family: var(--font-title);
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .quiz-result-area p {
+      font-size: 0.925rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    /* -------------------------------------------------------------
+       PILGRIM VIRGIN STATUE SECTION & BOOKING FORM
+    ------------------------------------------------------------- */
+    .statue-section-bg {
+      background: #fdfbf7;
+      border-top: 1px solid #ebd9b7;
+      border-bottom: 1px solid #ebd9b7;
+    }
+
+    .statue-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 3.5rem;
+      align-items: flex-start;
+    }
+
+    .statue-info-col h3 {
+      font-family: var(--font-title);
+      font-size: 1.85rem;
+      color: var(--primary-navy);
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+
+    .statue-info-col p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .visitation-steps-list {
+      margin: 1.5rem 0;
+      counter-reset: visit-counter;
+      list-style: none;
+    }
+
+    .visitation-steps-list li {
+      counter-increment: visit-counter;
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      align-items: flex-start;
+    }
+
+    .visitation-steps-list li::before {
+      content: counter(visit-counter);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--gold-bright);
+      color: var(--primary-navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .visitation-steps-list strong {
+      color: var(--primary-navy);
+      display: block;
+      font-size: 0.95rem;
+    }
+
+    .visitation-steps-list span {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .statue-form-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2.25rem;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-gold);
+    }
+
+    .statue-form-card h4 {
+      font-family: var(--font-title);
+      font-size: 1.35rem;
+      color: var(--primary-navy);
+      margin-bottom: 0.4rem;
+    }
+
+    .statue-form-card p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary-navy);
+      margin-bottom: 0.35rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.7rem 0.85rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 0.925rem;
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      transition: border-color 0.2s;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--marian-blue);
+      box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.15);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .form-submit-btn {
+      width: 100%;
+      background: var(--marian-blue);
+      color: #ffffff;
+      border: none;
+      padding: 0.85rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .form-submit-btn:hover {
+      background: var(--primary-navy);
+    }
+
+    /* Confirmation Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(14, 32, 64, 0.75);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .modal-card {
+      background: #ffffff;
+      max-width: 580px;
+      width: 100%;
+      border-radius: 12px;
+      padding: 2.5rem;
+      border: 2px solid var(--gold-bright);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      animation: modalSlide 0.3s ease;
+    }
+
+    @keyframes modalSlide {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1.25rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-subtle);
+    }
+
+    /* -------------------------------------------------------------
+       THE TESSERA PRAYERS (FULL OFFICIAL TEXT)
+    ------------------------------------------------------------- */
+    .tessera-container {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .tessera-controls-bar {
+      background: var(--primary-navy);
+      color: #ffffff;
+      padding: 1rem 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .tessera-controls-left h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: #ffffff;
+    }
+
+    .tessera-controls-left span {
+      font-size: 0.8rem;
+      color: #93c5fd;
+    }
+
+    .tessera-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn-tessera-tool {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      padding: 0.35rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .btn-tessera-tool:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .tessera-tabs-nav {
+      display: flex;
+      background: var(--marian-sky);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .tessera-tab-item {
+      flex: 1;
+      padding: 1rem;
+      text-align: center;
+      font-family: var(--font-title);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary-navy);
+      background: none;
+      border: none;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .tessera-tab-item.active {
+      background: #ffffff;
+      color: var(--marian-blue);
+      border-bottom-color: var(--gold-bright);
+    }
+
+    .tessera-content-panel {
+      padding: 2.5rem;
+      font-size: 1rem;
+      line-height: 1.8;
+      max-height: 650px;
+      overflow-y: auto;
+    }
+
+    .prayer-rubric {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--flame-red);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .prayer-versicle {
+      margin-bottom: 0.65rem;
+    }
+
+    .prayer-versicle strong {
+      color: var(--flame-red);
+      font-weight: 700;
+    }
+
+    .prayer-section-title {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--primary-navy);
+      margin: 1.75rem 0 0.85rem;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.35rem;
+    }
+
+    .latin-phrase {
+      font-style: italic;
+      color: var(--marian-blue);
+      font-weight: 600;
+    }
+
+    /* -------------------------------------------------------------
+       APOSTOLIC MINISTRIES GRID
+    ------------------------------------------------------------- */
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+
+    .work-card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 1.75rem;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .work-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-gold);
+    }
+
+    .work-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: var(--gold-light);
+      color: var(--gold-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .work-icon-box svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+    }
+
+    .work-card h4 {
+      font-family: var(--font-title);
+      font-size: 1.1rem;
+      color: var(--primary-navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .work-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* -------------------------------------------------------------
+       LEGION HEROES & CAUSES FOR BEATIFICATION
+    ------------------------------------------------------------- */
+    .saints-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .saint-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem 1.75rem;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+
+    .saint-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--marian-sky);
+      border: 2px solid var(--gold-bright);
+      margin: 0 auto 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--marian-blue);
+      font-family: var(--font-title);
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .saint-title {
+      font-family: var(--font-title);
+      font-size: 1.15rem;
+      color: var(--primary-navy);
+      margin-bottom: 0.25rem;
+    }
+
+    .saint-dates {
+      font-size: 0.785rem;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-bottom: 0.85rem;
+      display: block;
+    }
+
+    .saint-role {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--marian-blue);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .saint-card p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* -------------------------------------------------------------
+       EVENTS & FEAST DAYS TIMELINE
+    ------------------------------------------------------------- */
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .event-card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .event-date-badge {
+      background: var(--marian-blue);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 0.75rem;
+    }
+
+    .event-card h4 {
+      font-family: var(--font-title);
+      font-size: 1.05rem;
+      color: var(--primary-navy);
+      margin-bottom: 0.4rem;
+    }
+
+    .event-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* -------------------------------------------------------------
+       CONTACT & PRAYER PETITIONS SECTION
+    ------------------------------------------------------------- */
+    .contact-container {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+    }
+
+    .contact-info-panel {
+      background: var(--primary-navy);
+      color: #ffffff;
+      padding: 3rem 2.5rem;
+      position: relative;
+    }
+
+    .contact-info-panel h3 {
+      font-family: var(--font-title);
+      font-size: 1.6rem;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info-panel p {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-meta-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-meta-item svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--gold-bright);
+      flex-shrink: 0;
+      margin-top: 0.25rem;
+    }
+
+    .contact-meta-item h5 {
+      font-size: 0.85rem;
+      color: #93c5fd;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-meta-item p {
+      font-size: 0.95rem;
+      color: #ffffff;
+      margin-bottom: 0;
+      line-height: 1.35;
+    }
+
+    .contact-form-panel {
+      padding: 3rem 2.5rem;
+    }
+
+    .contact-form-panel h3 {
+      font-family: var(--font-title);
+      font-size: 1.4rem;
+      color: var(--primary-navy);
+      margin-bottom: 0.35rem;
+    }
+
+    .contact-form-panel p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    /* -------------------------------------------------------------
+       FOOTER
+    ------------------------------------------------------------- */
+    .site-footer {
+      background: #081426;
+      color: #cbd5e1;
+      padding: 4rem 1.5rem 2rem;
+      border-top: 3px solid var(--gold-bright);
+      font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand h4 {
+      font-family: var(--font-title);
+      font-size: 1.15rem;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: #94a3b8;
+      margin-bottom: 1rem;
+    }
+
+    .footer-col h5 {
+      font-family: var(--font-title);
+      font-size: 0.95rem;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      position: relative;
+      padding-bottom: 0.4rem;
+    }
+
+    .footer-col h5::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 28px;
+      height: 2px;
+      background: var(--gold-bright);
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 1.75rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #64748b;
+    }
+
+    .footer-scripture {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: #cbd5e1;
+    }
+
+    /* -------------------------------------------------------------
+       PRINT STYLESHEET (TESSERA POCKET PRAYER LEAFLET)
+    ------------------------------------------------------------- */
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #tessera-section, #tessera-section * {
+        visibility: visible;
+      }
+      #tessera-section {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .tessera-controls-bar, .tessera-tabs-nav {
+        display: none !important;
+      }
+      .tessera-content-panel {
+        max-height: none !important;
+        overflow: visible !important;
+      }
+    }
+
+    /* -------------------------------------------------------------
+       RESPONSIVE BREAKPOINTS
+    ------------------------------------------------------------- */
+    @media (max-width: 1024px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .widget-grid {
+        grid-template-columns: 1fr;
+      }
+      .widget-intro {
+        border-right: none;
+        border-bottom: 1px solid var(--border-subtle);
+        padding-right: 0;
+        padding-bottom: 1.5rem;
+      }
+      .about-grid, .statue-grid, .membership-grid, .parish-cards-grid, .contact-container {
+        grid-template-columns: 1fr;
+      }
+      .timeline-steps, .events-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .works-grid, .saints-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar {
+        display: none;
+      }
+      .nav-links {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .hero-title {
+        font-size: 2.15rem;
+      }
+      .mystery-display-content {
+        grid-template-columns: 1fr;
+      }
+      .works-grid, .saints-grid, .timeline-steps, .events-grid, .quiz-options, .altar-elements-list, .form-row-2 {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
