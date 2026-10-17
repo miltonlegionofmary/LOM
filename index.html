@@ -1350,11 +1350,36 @@ Juniors participate alongside senior Legionaries in visiting and praying with th
         <h3>Send an Inquiry or Prayer Petition</h3>
         <p>Submit your prayer intention to be remembered during our weekly Rosary and praesidium meeting.</p>
 
-        <form id="contact-form" onsubmit="handleContactSubmit(event)">
-          <div class="form-group">
-            <label class="form-label" for="contact-name">Your Full Name *</label>
-            <input type="text" id="contact-name" class="form-control" required placeholder="Mary Johnson">
-          </div>
+
+		  <form action="https://formsubmit.co" method="POST">
+  <!-- Honeypot spam protection element -->
+  <input type="text" name="_honey" style="display:none">
+
+  <!-- Disable the standard FormSubmit thank you page redirect (Optional) -->
+  <!-- <input type="hidden" name="_next" value="https://github.io"> -->
+		  
+		  
+		  <form id="contact-form" >
+          <div class="form-group">       
+
+
+
+  <label class="form-label" for="contact-name">Your Full Name *</label>
+  <input type="text" name="name" id="name" required>
+  <input type="text" id="contact-name" class="form-control" required placeholder="Mary Johnson"> </div>
+          
+  <label for="email">Email</label>
+  <input type="email" name="email" id="email" required>
+
+  <label for="message">Message</label>
+  <textarea name="message" id="message" required></textarea>
+
+  
+            
+
+	
+            
+            
 
           <div class="form-row-2">
             <div class="form-group">
@@ -1375,15 +1400,17 @@ Juniors participate alongside senior Legionaries in visiting and praying with th
           <div class="form-group">
             <label class="form-label" for="contact-message">Message or Prayer Intention *</label>
             <textarea id="contact-message" class="form-control" required style="min-height: 110px;" placeholder="Please share your prayer request or how we can assist you..."></textarea>
-          </div>
+          </div>	  
 
-          <button type="submit" class="form-submit-btn"><a href="mailto:miltonlegionofmary@gmail.com." class="button">
-  Send Message to Praesidium
-</a>
-            
 
-          </button>
-        </form>
+
+<button type="submit">Send Message</button>
+</form>
+
+
+
+
+		  
       </div>
     </div>
   </section>
