@@ -8,11 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <!-- TOP BAR -->
   <div class="top-bar">
     <div class="top-bar-left">
@@ -26,7 +24,6 @@
       <span>Serving St. Benedict Parish & Holy Rosary Parish</span>
     </div>
   </div>
-
   <!-- NAVIGATION HEADER -->
   <header class="header-nav">
     <div class="nav-container">
@@ -38,7 +35,6 @@
           <span>Our Lady of Fatima Praesidium • Milton</span>
         </div>
       </a>
-
       <nav>
         <ul class="nav-links" id="nav-links">
           <li><a href="#about">About</a></li>
@@ -53,13 +49,11 @@
 		  <li><a href="#links"> Links</a></li>
         </ul>
       </nav>
-
       <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle Navigation">
         ☰
       </button>
     </div>
   </header>
-
   <!-- HERO SECTION -->
   <section class="hero-section" id="home">
     <div class="hero-overlay-pattern"></div>
@@ -72,13 +66,11 @@
         <h2 class="hero-title">
           Under the Standard of Mary Immaculate
           <span>Our Lady of Fatima Praesidium</span>
-        </h2>
-        
+        </h2>   
         <div class="hero-quote">
           "Who is she that comes forth as the morning rising, fair as the moon, bright as the sun, terrible as an army set in battle array?"
           <span class="hero-quote-latin">Catena Legionis (Song of Songs 6:10)</span>
         </div>
-
         <div class="hero-actions">
           <a href="#statue" class="btn-gold">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
@@ -94,12 +86,10 @@
           </a>
         </div>
       </div>
-
       <!-- Hero Meeting Info Card -->
       <div class="hero-meeting-card" id="meeting-quick-card">
         <span class="card-header-badge">Weekly Praesidium Gathering</span>
-        <h3 class="meeting-card-title">Join Us This Tuesday</h3>
-        
+        <h3 class="meeting-card-title">Join Us This Tuesday</h3> 
         <div class="meeting-detail-row">
           <div class="detail-icon-wrap">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -110,7 +100,6 @@
             <small>Weekly duration: Approx. 75–90 minutes</small>
           </div>
         </div>
-
         <div class="meeting-detail-row">
           <div class="detail-icon-wrap">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
@@ -121,7 +110,6 @@
             <small>300 Yates Drive, Milton, ON L9T 2W3 (Nursia Room)</small>
           </div>
         </div>
-
         <div class="meeting-detail-row">
           <div class="detail-icon-wrap">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
@@ -132,7 +120,6 @@
             <small>Welcoming Catholic parishioners from across Milton</small>
           </div>
         </div>
-
         <div style="margin-top: 1.25rem;">
           <a href="#contact" class="btn-gold" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.65rem;">
             Come as a Guest to Our Next Meeting
@@ -141,7 +128,6 @@
       </div>
     </div>
   </section>
-
   <!-- DAILY ROSARY MYSTERY WIDGET (INTERACTIVE) -->
   <div class="section-wrap" style="padding-top: 0; padding-bottom: 2rem;">
     <div class="mystery-widget-card">
@@ -150,8 +136,7 @@
           <span class="widget-badge-today" id="today-day-label">Today's Holy Rosary</span>
           <h3 id="current-mystery-name">The Sorrowful Mysteries</h3>
           <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.75rem;">
-            "Meditation on the mysteries of Christ with Mary is the secret to Christian holiness."
-          </p>
+            "Meditation on the mysteries of Christ with Mary is the secret to Christian holiness."</p>
           <div class="mystery-selector-tabs">
             <button class="mystery-tab" data-day="joyful" onclick="selectMystery('joyful')">Joyful (Mon/Sat)</button>
             <button class="mystery-tab" data-day="sorrowful" onclick="selectMystery('sorrowful')">Sorrowful (Tue/Fri)</button>
@@ -159,14 +144,12 @@
             <button class="mystery-tab" data-day="luminous" onclick="selectMystery('luminous')">Luminous (Thu)</button>
           </div>
         </div>
-
         <div class="mystery-display-content" id="mystery-beads-container">
           <!-- Populated by JavaScript -->
         </div>
       </div>
     </div>
   </div>
-
   <!-- ABOUT SECTION -->
   <section class="section-wrap" id="about">
     <div class="section-header-center">
@@ -174,10 +157,8 @@
       <h2 class="section-title">The Legion of Mary in Milton</h2>
       <div class="gold-divider"></div>
       <p class="section-subtitle">
-        A worldwide lay Catholic association serving the Church under the guidance of Mary Immaculate and the sanction of the ecclesiastical hierarchy.
-      </p>
+        A worldwide lay Catholic association serving the Church under the guidance of Mary Immaculate and the sanction of the ecclesiastical hierarchy.</p>
     </div>
-
     <div class="about-grid">
       <div class="about-text">
         <p>
@@ -185,17 +166,13 @@
         </p>
         <p>
           In Milton, Ontario, <strong>Our Lady of Fatima Praesidium</strong> unites members from both <strong>Holy Rosary Parish</strong> and <strong>St. Benedict of Nursia Parish</strong>. The basic unit of the Legion is called a <em>praesidium</em>, which holds a weekly meeting and allocates substantial apostolic tasks to its members, who always work in pairs under the spiritual direction of our parish clergy.
-        </p>
-        
+        </p>        
         <div class="highlight-card">
           <h4>The Core Aim of the Legion</h4>
           <p>
             The object of the Legion of Mary is the glory of God through the holiness of its members developed by prayer and active co-operation in Mary's and the Church's work of advancing the reign of Christ.
-          </p>
-        </div>
-
-        <p>
-          Legionary service is grounded in the doctrine of the <strong>Mystical Body of Christ</strong>: in every person encountered—whether sick, lonely, lapsed, or inquiring—legionaries seek to behold and serve the Person of Jesus Christ through the maternal care of Mary, His Mother.
+          </p></div> 
+		  <p> Legionary service is grounded in the doctrine of the <strong>Mystical Body of Christ</strong>: in every person encountered—whether sick, lonely, lapsed, or inquiring—legionaries seek to behold and serve the Person of Jesus Christ through the maternal care of Mary, His Mother.
         </p>
       </div>
 
@@ -560,9 +537,7 @@
 
         <div style="margin-top: 1.5rem;">
          <a href="#contact" class="btn-gold" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.65rem;">
-               
-            Enroll as an Auxiliary Member
-			
+            Enroll as an Auxiliary Member	
           </a>
         </div>
       </div>
@@ -594,17 +569,11 @@ Juniors participate alongside senior Legionaries in visiting and praying with th
           </li>
         </ul>
 
-        
-
         <div style="margin-top: 1.5rem;">
           <a href="#contact" class="btn-gold" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.65rem;">
              Inquire About Junior Membership </a>
-            
 			  </div>
       </div>
-
-
-
     <!-- INTERACTIVE MEMBERSHIP FINDER QUIZ -->
     <div class="quiz-card">
       <div class="quiz-header">
@@ -698,9 +667,7 @@ Juniors participate alongside senior Legionaries in visiting and praying with th
         </div>
       </div>
     </div>
-  </section>
-
-  
+  </section>  
 
 <!-- DIVINE MERCY IMAGE SECTION & BOOKING FORM -->
   <section class="statue-section-bg" id="divine">
@@ -750,15 +717,11 @@ Juniors participate alongside senior Legionaries in visiting and praying with th
             ✦ There is never any cost or fee. This is a complimentary spiritual ministry offered with joy by Our Lady of Fatima Praesidium.
           </div>
         </div>
-
         <!-- Interactive Booking Form -->
         <div class="statue-form-card">
           <h4>Request a Home Visit in Milton</h4>
           <p>Please fill out your details to schedule a visit for your family.</p>
-
-              
-                         
-          
+            
             <button type="submit" class="form-submit-btn">
                  <a href="#contact" class="btn-gold" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 0.65rem;">
           Submit Divine Mercy Request </a>
@@ -817,11 +780,9 @@ Juniors participate alongside senior Legionaries in visiting and praying with th
           <p>
             The image of the Sacred Heart of Jesus comes into Catholic homes in Milton to foster the family prayer and bring heavenly peace into the domestic church.
           </p>
-
           <h4 style="font-family: var(--font-title); font-size: 1.15rem; color: var(--primary-navy); margin-top: 1.5rem;">
             How the Home Visitation Works:
           </h4>
-
           <ol class="visitation-steps-list">
             <li>
               <div>
@@ -835,10 +796,8 @@ Juniors participate alongside senior Legionaries in visiting and praying with th
                 <span>The image resides in a place of honour in your home. Your family is invited to gather each evening for the prayers and personal intentions.</span>
               </div>
             </li>
-           
-                          
+                        
           </ol>
-
           <div style="background: rgba(184, 134, 11, 0.1); border-left: 3px solid var(--gold-bright); padding: 1rem; border-radius: 0 6px 6px 0; font-size: 0.88rem; color: var(--gold-dark); font-weight: 500;">
             ✦ There is never any cost or fee. This is a complimentary spiritual ministry offered with joy by Our Lady of Fatima Praesidium.
           </div>
@@ -856,11 +815,6 @@ Juniors participate alongside senior Legionaries in visiting and praying with th
       </div>
     </div>
   </section>
-
-  
-       
-      
-
   <!-- THE TESSERA PRAYERS (FULL OFFICIAL TEXT) -->
   <section class="section-wrap" id="tessera">
     <div class="section-header-center">
@@ -1124,26 +1078,25 @@ Juniors participate alongside senior Legionaries in visiting and praying with th
     <div class="events-grid">
       <div class="event-card">
         <span class="event-date-badge"></span>
-        <h4>The History of Legion</h4>
+        <a href="history.html" target="_blank"><h4>The History of Legion</h4></a>a>
         <p>A short history of the Legion of Mary. </p>
       </div>
 
       <div class="event-card">
         <span class="event-date-badge"></span>
-        <h4>Feasts of Our Lady </h4>
+        <a href="feasts.html" target="_blank"><h4>Feasts of Our Lady </h4></a>
         <p>Our Lady has feasts and dedications throughtout the year</p>
       </div>
 
       <div class="event-card">
         <span class="event-date-badge"></span>
 		  <a href="antiphons.html" target="_blank"><h4>Antiphons of The Blessed Virgin Mary</h4></a>
-        
-        <p>Marian Antiphons are ancient Latin Gregorian chant hymns. Each antiphon corresponds to a specific time of the liturgical year. </p>
+          <p>Marian Antiphons are ancient Latin Gregorian chant hymns. Each antiphon corresponds to a specific time of the liturgical year. </p>
       </div>
 
       <div class="event-card">
         <span class="event-date-badge"></span>
-        <h4>Marian Hymns</h4>
+        <a href="hymns.html" target="_blank"><h4>Marian Hymns</h4></a>
         <p>A festive collections of Hymns dedicated to Mother Mary.</p>
       </div>
     </div>
