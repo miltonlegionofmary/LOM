@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legion of Mary | Our Lady of Fatima Praesidium - Milton, Ontario</title>
+  <meta name="description" content="Official website of the Legion of Mary, Our Lady of Fatima Praesidium in Milton, Ontario, serving St. Benedict and Holy Rosary Catholic Parishes. Discover our apostolic works, weekly meetings, Pilgrim Virgin statue visits, and Tessera prayers.">
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Clean fallback & layout styles that work alongside your style.css */
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      background-color: #faf9f6;
+      color: #24292e;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .prayer-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header.page-header {
+      text-align: center;
+      padding: 36px 20px;
+      background-color: #ffffff;
+      border-bottom: 2px solid #e5dec9;
+      margin-bottom: 36px;
+    }
+
+    header.page-header h1 {
+      font-family: 'Cinzel', serif;
+      color: #1b365d;
+      font-size: 1.9rem;
+      margin: 0 0 8px 0;
+    }
+
+    header.page-header p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: #6c757d;
+      margin: 0 0 22px 0;
+      letter-spacing: 0.5px;
+    }
+
+    .prayer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 22px;
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .prayer-nav a {
+      color: #1b365d;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .prayer-nav a:hover {
+      background-color: #f0ebe1;
+      color: #9e7316;
+    }
+
+    .prayer-card {
+      background: #ffffff;
+      border: 1px solid #e8e3d5;
+      border-top: 4px solid #1b365d;
+      border-radius: 8px;
+      padding: 36px 40px;
+      margin-bottom: 36px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    .prayer-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .prayer-header h2 {
+      font-family: 'Cinzel', serif;
+      color: #1b365d;
+      font-size: 1.7rem;
+      margin: 0 0 8px 0;
+    }
+
+    .season-badge {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #9e7316;
+      background: #fbf7ee;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid #eadcb9;
+      margin-bottom: 12px;
+    }
+
+    .rubric-note {
+      font-style: italic;
+      color: #555e68;
+      font-size: 1.05rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .bilingual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin: 28px 0;
+      padding: 24px 0;
+      border-top: 1px solid #eee9dc;
+      border-bottom: 1px solid #eee9dc;
+    }
+
+    .lang-col h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #8c96a0;
+      margin: 0 0 10px 0;
+    }
+
+    .prayer-verse {
+      font-size: 1.2rem;
+      white-space: pre-line;
+      margin: 0;
+    }
+
+    .latin-text {
+      font-style: italic;
+    }
+
+    .versicle-block {
+      margin-top: 20px;
+      font-size: 1.15rem;
+    }
+
+    .versicle-block + .versicle-block {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px dashed #e2dccb;
+    }
+
+    .season-sublabel {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #9e7316;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .litany-subheading {
+      font-family: 'Cinzel', serif;
+      color: #1b365d;
+      font-size: 1.25rem;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+
+    .litany-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px auto 32px auto;
+      max-width: 540px;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    .litany-list li {
+      padding: 7px 0;
+      border-bottom: 1px solid #f2efe7;
+    }
+
+    .litany-list li:last-child {
+      border-bottom: none;
+    }
+
+    .litany-response {
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #1b365d;
+      background: #f4f6f9;
+      padding: 10px;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+
+    .closing-prayer {
+      border-top: 1px solid #eee9dc;
+      padding-top: 20px;
+      font-size: 1.15rem;
+    }
+
+    @media (max-width: 700px) {
+      .bilingual-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .prayer-card {
+        padding: 24px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <h1>Legion of Mary &mdash; Our Lady of Fatima Praesidium</h1><h2> Milton</h2>
+    <p> Marian Antiphons &amp; Devotional Prayers</p>
+    <nav class="prayer-nav" aria-label="Prayer Navigation">
+      <a href="#alma">Alma Redemptoris Mater</a>
+      <a href="#regina">Ave Regina Caelorum</a>
+      <a href="#caeli">Regina Caeli</a>
+      <a href="#salve">Salve Regina</a>
+      <a href="#litany">A Marianist Litany to Mary</a>
+    </nav>
+  </header>
+
+  <main class="prayer-container">
+
+    <!-- 1. ALMA REDEMPTORIS MATER -->
+    <section id="alma" class="prayer-card">
+      <div class="prayer-header">
+        <h2>Alma Redemptoris Mater</h2>
+        <span class="season-badge">Advent until February 2 (Presentation in the Temple)</span>
+        <p class="rubric-note">
+          The Alma Redemptoris Mater is one of the four seasonal antiphons prescribed to be sung or recited in the Liturgy of the Hours after night prayer (Compline or Vespers). It is usually sung from the eve of the first Sunday of Advent until the Friday before the Feast of the Presentation of the Lord in the Temple.
+        </p>
+      </div>
+
+      <div class="bilingual-grid">
+        <div class="lang-col">
+          <h3>English</h3>
+          <p class="prayer-verse">Loving mother of the Redeemer,
+gate of heaven, star of the sea,
+assist your people who have fallen yet strive to rise again.
+To the wonderment of nature you bore your Creator,
+yet remained a virgin after as before.
+You who received Gabriel's joyful greeting,
+have pity on us poor sinners.</p>
+        </div>
+
+        <div class="lang-col">
+          <h3>Latin</h3>
+          <p class="prayer-verse latin-text">Alma Redemptoris Mater, quae pervia caeli
+porta manes, et stella maris, succurre cadenti,
+surgere qui curat, populo: tu quae genuisti,
+natura mirante, tuum sanctum Genitorem,
+Virgo prius ac posterius, Gabrielis ab ore,
+sumens illud Ave, peccatorum miserere.</p>
+        </div>
+      </div>
+
+      <div class="versicle-block">
+        <span class="season-sublabel">(During Advent)</span>
+        <p>
+          <strong>V.</strong> The Angel of the Lord brought tidings to Mary.<br>
+          <strong>R.</strong> And she conceived by the Holy Spirit.
+        </p>
+        <p>
+          Lord, pour your grace into our hearts, that as we have known the Incarnation of your Son Jesus Christ by the message of an angel, so by His cross and passion may we be brought to the glory of His Resurrection. Through the same Christ our Lord. Amen.
+        </p>
+      </div>
+
+      <div class="versicle-block">
+        <span class="season-sublabel">(After Christmas)</span>
+        <p>
+          <strong>V.</strong> After Childbearing, O Virgin, you remained inviolate.<br>
+          <strong>R.</strong> Intercede for us, O Mother of God.
+        </p>
+        <p>
+          O God, Who by the fruitful virginity of Blessed Mary hast bestowed upon mankind the reward of eternal salvation, grant, we beseech thee, that we may know the help of her intercession, through whom we have been made worthy to receive the Author of our life, Our Lord Jesus Christ, Your Son: Who lives and reigns with You, in the unity of the Holy Spirit, One God, world without end. Amen.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. AVE REGINA CAELORUM -->
+    <section id="regina" class="prayer-card">
+      <div class="prayer-header">
+        <h2>Ave Regina Caelorum</h2>
+        <span class="season-badge">Lent (Presentation of the Lord until Holy Thursday)</span>
+        <p class="rubric-note">
+          The antiphon, Ave Regina Caelorum, is sung as the concluding antiphon in the Liturgy of the Hours from the Presentation of the Lord until Holy Thursday.
+        </p>
+      </div>
+
+      <div class="bilingual-grid">
+        <div class="lang-col">
+          <h3>English</h3>
+          <p class="prayer-verse">Hail, Queen of heaven;
+Hail, Mistress of the Angels;
+Hail, root of Jesus;
+Hail, the gate through which the
+Light rose over the earth.
+Rejoice, Virgin most renowned
+and of unsurpassed beauty,
+and pray for us to Christ.</p>
+        </div>
+
+        <div class="lang-col">
+          <h3>Latin</h3>
+          <p class="prayer-verse latin-text">Ave, Regina caelorum,
+ave, Domina angelorum,
+salve, radix, salve, porta,
+ex qua mundo lux est orta.
+Gaude, Virgo gloriosa,
+super omnes speciosa;
+vale, o valde decora,
+et pro nobis Christum exora.</p>
+        </div>
+      </div>
+
+      <div class="versicle-block">
+        <p>
+          <strong>V.</strong> Vouchsafe that I may praise thee, O Holy Virgin.<br>
+          <strong>R.</strong> Give me strength against thine enemies.
+        </p>
+        <p>
+Grant us, O merciful God, protection in our weakness: that we who celebrate the memory of the Holy Mother of God may, through the aid of her intercession, rise again from our sins. Through Christ our Lord. Amen.</p>
+
+</p>
+      </div>
+    </section>
+
+
+<!-- 3.  REGINA CAELI -->
+    <section id="caeli" class="prayer-card">
+      <div class="prayer-header">
+        <h2>Regina Caeli</h2>
+        <span class="season-badge">Eastertide (Holy Saturday to Saturday after Pentecost)</span>
+        <p class="rubric-note">
+          The Regina Caeli is one of the four seasonal antiphons of the Blessed Virgin Mary prescribed to be sung or recited in the Liturgy of the Hours after night prayer (Compline or Vespers) from Holy Saturday to the Saturday after Pentecost.
+        </p>
+      </div>
+
+
+
+<div class="bilingual-grid">
+        <div class="lang-col">
+          <h3>English</h3>
+          <p class="prayer-verse">Regina Caeli;
+Queen of heaven, rejoice, alleluia:
+For He whom you merited to bear, alleluia,
+Has risen, as He said, alleluia.
+Pray for us to God, alleluia.
+V. Rejoice and be glad, O Virgin Mary, alleluia.
+R. For the Lord has truly risen, alleluia.
+</p>
+        </div>
+
+        <div class="lang-col">
+          <h3>Latin</h3>
+          <p class="prayer-verse latin-text">Regina Caeli,
+Regina coeli laetare, alleluia,
+Quia quem meruisti portare, alleluia,
+Resurrexit sicut dixit, alleluia.
+Ora pro nobis Deum, alleluia.
+V. Gaude et laetare, Virgo Maria, alleluia.
+R. Quia surrexit Dominus vere, alleluia.
+.</p>
+        </div>
+      </div>
+
+      <div class="versicle-block">
+        <p>
+          <strong>V.</strong> Vouchsafe that I may praise thee, O Holy Virgin.<br>
+          <strong>R.</strong> Give me strength against thine enemies.
+        </p>
+
+<p> O God, who by the resurrection of your Son Jesus Christ gave gladness to the world; grant that we, being helped by the Virgin Mary, may attain to the joys of eternal life. Through Christ our Lord. Amen.</p>
+
+
+      </div>
+    </section>
+
+
+
+<!-- 4. SALVE REGINA -->
+    <section id="salve" class="prayer-card">
+      <div class="prayer-header">
+        <h2>Salve Regina</h2>
+        <span class="season-badge">Ordinary Time (Easter to Advent)</span>
+        <p class="rubric-note">
+          Marian Antiphon for Ordinary Time.
+        </p>
+      </div>
+
+      <div class="bilingual-grid">
+        <div class="lang-col">
+          <h3>English</h3>
+          <p class="prayer-verse">
+Hail, holy Queen, Mother of mercy,
+hail, our life, our sweetness, and our hope.
+To you we cry, the children of Eve;
+to you we send up our sighs,
+mourning and weeping in this land of exile.
+Turn, then, most gracious advocate,
+your eyes of mercy toward us;
+lead us home at last
+and show us the blessed fruit of your womb, Jesus:
+O clement, O loving, O sweet virgin Mary.</p>
+        </div>
+
+        <div class="lang-col">
+          <h3>Latin</h3>
+          <p class="prayer-verse latin-text">
+Salve, Regina, mater misericordiae;
+vita, dulcedo et spes nostra, salve.
+Ad te clamamus, exsules filii Hevae.
+Ad te suspiramus, gementes et flentes
+in hac lacrimarum valle.
+Eia ergo, advocata nostra,
+illos tuos misericordes oculos ad nos converte.
+Et Iesum, benedictum fructum ventris tui,
+nobis post hoc exsilium ostende.
+O clemens, o pia, o dulcis Virgo Maria..</p>
+        </div>
+      </div>
+
+      
+
+      <div class="versicle-block">
+        <span class="season-sublabel"></span>
+        <p>
+          <strong>V.</strong> Pray for us, O holy Mother of God.<br>
+          <strong>R.</strong> That we may be made worthy of the promises of Christ..
+        </p>
+        <p>
+          Almighty and everlasting God who by the co-operation of the Holy Spirit prepared the body and soul of the glorious Virgin Mother Mary to become a habitation fit for thy Son: grant that as we rejoice in her commemoration, we may be delivered by her loving intercession from our present evils and from eternal death. Through Christ our Lord. Amen.
+        </p>
+      </div>
+    </section>
+
+
+
+<!-- 5. Litany -->
+    <section id="litany" class="prayer-card">
+      <div class="prayer-header">
+        <h2>Litany</h2>
+        <span class="season-badge">A Marianist Litany to Mary</span>
+        <p class="rubric-note">
+          Reverend Joseph H. Lackner, S.M.</p>   </div>
+
+
+<p><h3>Opening Prayer</h3></p>
+
+<p>Mary, God chose you as the mother of his Son and called all nations and generations to bless the gift of grace he gave you. In the company of those who have gone before us, with people of all races and languages, we call upon you in prayer.</p>
+
+<i>Response for the following: <b>Pray for us.</b></i>
+
+
+<ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+  <li>Holy Mary</li>
+  <li>Mother of God</li>
+  <li>Mother of our redemption</li>
+<li>Mother of a lost child</li>
+<li>Mother of comfort and understanding</li>
+<li>Mother who shares our joys</li>
+<li>Mother who endures our sorrows</li>
+<li>Mother whose heart was pierced by a sword</li>
+<li>Mother most merciful</li>
+<li>Woman responsive to God's word</li>
+<li>Woman willing to believe the impossible</li>
+<li>Woman who rejoices in her lowliness</li>
+<li>Woman with an undivided heart</li>
+<li>Woman of perfect freedom</li>
+<li>Woman wrapped in mystery</li>
+<li>Woman moved by the Spirit</li>
+<li>Woman champion of the poor and lowly</li>
+<li>Woman graced by a husband's love</li>
+<li>Woman widowed by a husband's death</li>
+<li>Woman at the cross</li>
+<li>Woman patient and waiting</li>
+<li>Woman clothed with the sun</li>
+<li>Queen of the fullness of times</li>
+<li>Queen of beauty unalloyed</li>
+<li>Queen of integrity</li>
+<li>Queen of painful meetings</li>
+<li>Queen of all our heart's treasure</li>
+<li>Queen of our destiny</li>
+<li>Queen of peace</li>
+</ul>
+
+<p><h3>Let us pray:</h3></p>
+
+<p>Mary, you are mother and virgin, wife and widow, peasant and queen—blessed for all time. We need the comfort of your prayers. Remember us always to our Father through your Son, Jesus Christ, who is our Lord for ever and ever. Amen.</p>
+
+</section>
+</body>
+</html>
